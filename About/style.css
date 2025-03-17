@@ -415,7 +415,7 @@ a {
 }
 
 .servicesItems p {
-  text-align: start;
+  text-align: center;
   font-size: 13px;
   color: #626262;
 }
@@ -442,7 +442,6 @@ a {
 }
 
 .recentItems {
-  /* width: 400px; */
   height: 250px;
   overflow: hidden;
   border-radius: 5px;
@@ -503,7 +502,7 @@ a {
   justify-content: center;
   border: 1px solid white;
   border-radius: 5px;
-  padding: 77px 105px;
+  padding: 80px 110px;
 }
 
 /* ?skills */
@@ -673,19 +672,19 @@ a {
   background: white;
 }
 
-h3 {
+.articlesItems h3 {
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 10px;
 }
 
-p {
+.articlesItems p {
   color: #666;
   font-size: 14px;
   margin-top: 5px;
 }
 
-section {
+.articlesItems section {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -737,4 +736,91 @@ footer {
 .rightsReserved {
   color: white;
   font-size: 13px;
+}
+
+@media (max-width: 404px) {
+  .name {
+    font-size: 1.5rem !important;
+  }
+  .description {
+    font-size: 12px;
+  }
+  .btnSection button a {
+    font-size: 9px !important;
+  }
+  .btnSection button {
+    padding: 8px 20px;
+  }
+  .content .socialMedia div .fa {
+    font-size: 17px;
+  }
+  .servicesText,
+  .recentText,
+  .skillsText,
+  .articlesText {
+    font-size: 1.5rem;
+  }
+  .servicesItems .fa {
+    font-size: 20px !important;
+  }
+  .servicesItems h3 {
+    font-size: 15px;
+  }
+  .servicesItems p {
+    font-size: 10px;
+  }
+  .servicesItems {
+    height: auto;
+  }
+  .recentItems {
+    width: 100%;
+    height: auto;
+  }
+  .recentContents {
+    grid-template-columns: none;
+  }
+  .recentHover h3 {
+    font-size: 15px;
+    text-align: center;
+    min-width: none;
+  }
+  .recentHover p {
+    font-size: 10px;
+    margin-top: -10px;
+  }
+  .recentHover div {
+    padding: 39px 72px;
+  }
+  .logo a {
+    font-size: 14px;
+  }
+  .menu {
+    width: 25px;
+    gap: 7px;
+  }
+  .skill-section h2 {
+    font-size: 18px;
+  }
+  .skill-name,
+  .skill::after {
+    font-size: 10px;
+  }
+  .articlesItems h3 {
+    font-size: 14px;
+  }
+  .articlesItems p {
+    font-size: 11px;
+  }
+  .articlesItems{
+    height: auto;
+  }
+  .footerContainer .socialMedia .fa{
+    font-size: 17px;
+  }
+  .rightsReserved{
+    font-size: 10px;
+  }
+  .footerContainer{
+    gap: 10px;
+  }
 }

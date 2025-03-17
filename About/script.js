@@ -26,9 +26,7 @@ const clickMenuItems = document.querySelector(".clickMenuItems");
 clickMenuItems.style.maxHeight = "0px";
 
 menu.addEventListener("click", () => {
-  if (
-    (clickMenuItems.style.maxHeight === "0px")
-  ) {
+  if (clickMenuItems.style.maxHeight === "0px") {
     clickMenuItems.style.maxHeight = "200px";
   } else {
     clickMenuItems.style.maxHeight = "0px";
@@ -122,3 +120,11 @@ recentCart.forEach((index) => {
 });
 
 document.querySelector(".recentContents").innerHTML = recentSaveHTML;
+
+(() => {
+  let rightsReservedDate = document.querySelector(".rightsReserved span");
+  const yearText = new Date().getFullYear();
+  if (rightsReservedDate) {
+    rightsReservedDate.innerHTML = yearText;
+  }
+})();

@@ -161,6 +161,7 @@ a {
   cursor: pointer;
 }
 
+
 .headerImageSection::after {
   content: "";
   position: absolute;
@@ -177,6 +178,7 @@ a {
   max-width: 250px;
   height: 100%;
 }
+
 
 @media (max-width: 501px) {
   .heroImage {
@@ -355,7 +357,7 @@ a {
   left: 0;
   right: 0;
   bottom: -5px;
-  width: 20%;
+  width: 100px;
   border: 10px;
   height: 2px;
   background-color: var(--header-color);
@@ -736,6 +738,14 @@ footer {
 .rightsReserved {
   color: white;
   font-size: 13px;
+}
+
+.rightsReserved a{
+  color: white;
+  transition: all .3s;
+}
+.rightsReserved a:hover{
+  color: #f36235;
 }
 
 @media (max-width: 404px) {

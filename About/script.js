@@ -143,4 +143,55 @@ serviceCards();
 recentCards();
 showDate();
 
-// 
+function articles() {
+  const articlesCart = [
+    {
+      image: "/post1.jpg",
+      title: "Different design patterns",
+      text: "Explore various design patterns that enhance code structure and maintainability. Learn how to implement scalable and efficient solutions in your projects.",
+      code: "JavaScript",
+      date: "Dec 18th, 2020",
+    },
+    {
+      image: "/post2.jpg",
+      title: "Social network designs",
+      text: "Dive into the world of social media UI/UX. Discover innovative design strategies and best practices to create engaging user experiences.",
+      code: "React",
+      date: "Jan 2nd, 2021",
+    },
+    {
+      image: "/post3.jpg",
+      title: "Creative coding tips",
+      text: "Unlock powerful coding techniques to write cleaner, more efficient code. Improve your problem-solving skills with expert programming insights.",
+      code: "Python",
+      date: "Jan 8th, 2021",
+    },
+  ];
+
+  let saveArticles = "";
+
+  articlesCart.forEach((index) => {
+    let { image, title, text, date, code } = index;
+    let html = `
+      <div class="articlesItems">
+        <div class="imageSection">
+          <img src="../photos${image}" alt="image">
+        </div>
+        <div class="texts">
+          <h3>${title}</h3>
+          <p>
+            ${text}
+          </p>
+          <section>
+            <p class="code">${code}</p>
+            <p>${date}</p>
+          </section>
+        </div>
+    </div>
+    `;
+    saveArticles += html;
+  });
+
+  document.querySelector(".articlesContents").innerHTML = saveArticles;
+}
+articles();

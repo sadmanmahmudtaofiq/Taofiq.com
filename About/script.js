@@ -129,20 +129,6 @@ function recentCards() {
   document.querySelector(".recentContents").innerHTML = recentSaveHTML;
 }
 
-function showDate() {
-  let rightsReservedDate = document.querySelector(".rightsReserved span");
-  const yearText = new Date().getFullYear();
-  if (rightsReservedDate) {
-    rightsReservedDate.innerHTML = yearText;
-  }
-}
-
-scroll();
-menu();
-serviceCards();
-recentCards();
-showDate();
-
 function articles() {
   const articlesCart = [
     {
@@ -194,4 +180,19 @@ function articles() {
 
   document.querySelector(".articlesContents").innerHTML = saveArticles;
 }
+
+function showDate() {
+  let rightsReservedDate = document.querySelector(".rightsReserved span");
+  const yearText = new Date().getFullYear();
+  if (rightsReservedDate) {
+    rightsReservedDate.innerHTML = yearText;
+  }
+}
+
+scroll();
+menu();
+serviceCards();
+recentCards();
 articles();
+showDate();
+

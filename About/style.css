@@ -105,6 +105,7 @@ a {
   height: 1px;
   transition: all 0.3s;
   background-color: var(--header-color);
+  margin: auto;
 }
 
 .items a:hover::after {
@@ -161,7 +162,6 @@ a {
   cursor: pointer;
 }
 
-
 .headerImageSection::after {
   content: "";
   position: absolute;
@@ -178,7 +178,6 @@ a {
   max-width: 250px;
   height: 100%;
 }
-
 
 @media (max-width: 501px) {
   .heroImage {
@@ -740,11 +739,11 @@ footer {
   font-size: 13px;
 }
 
-.rightsReserved a{
+.rightsReserved a {
   color: white;
-  transition: all .3s;
+  transition: all 0.3s;
 }
-.rightsReserved a:hover{
+.rightsReserved a:hover {
   color: #f36235;
 }
 
@@ -820,16 +819,80 @@ footer {
   .articlesItems p {
     font-size: 11px;
   }
-  .articlesItems{
+  .articlesItems {
     height: auto;
   }
-  .footerContainer .socialMedia .fa{
+  .footerContainer .socialMedia .fa {
     font-size: 17px;
   }
-  .rightsReserved{
+  .rightsReserved {
     font-size: 10px;
   }
-  .footerContainer{
+  .footerContainer {
     gap: 10px;
+  }
+}
+
+/* ! My name animation */
+
+.name {
+  /* margin: 30px 0; */
+  font-size: 30px;
+  position: relative;
+}
+
+.name::after {
+  overflow: hidden;
+  text-wrap: nowrap;
+  animation: typing 3s steps(20) infinite, textChange 6s steps(1) infinite;
+  width: 0ch;
+  content: "Sadman Mahmud";
+  position: absolute;
+  top: 0;
+  left: 55px;
+  color: black;
+  /* background-color: pink; */
+}
+
+@keyframes typing {
+  0%,
+  100% {
+    width: 0ch;
+  }
+  50% {
+    width: 20ch;
+  }
+}
+
+@keyframes textChange {
+  0%,
+  50% {
+    content: "Sadman Mahmud";
+  }
+  51%,
+  100% {
+    content: "a Developer";
+  }
+}
+
+.content {
+  overflow-x: hidden;
+}
+.name2 {
+  display: none;
+}
+
+@media (max-width: 500px) {
+  .name::after {
+    animation: none;
+  }
+  .name1 {
+    display: none;
+  }
+  .name2 {
+    display: block;
+  }
+  .content {
+    overflow-x: auto;
   }
 }

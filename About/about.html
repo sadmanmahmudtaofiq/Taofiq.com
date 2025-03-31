@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sadman Mahmud</title>
+    <link rel="shortcut icon" href="../photos/SM.png" type="image/x-icon" />
+    <link rel="stylesheet" href="about.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+
+    <div class="header">
+      <div class="headerContainer">
+        <div class="madeForSetBgColor">
+          <div class="headerTexts">
+            <div class="logo">
+              <a href="index.html" title="Taofiq"> <h1>Taofiq</h1> </a>
+            </div>
+
+            <div class="HeaderItems">
+              <div class="items">
+                <a href="index.html" title="Home">Home</a>
+                <a href="#" title="About">About</a>
+                <a href="#" title="Home">Projects</a>
+                <a href="contact.html" title="Home">Contact</a>
+              </div>
+            </div>
+
+            <div class="menuSection">
+              <div class="menu" title="Menu">
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div>
+
+            <div class="clickMenuItems">
+              <div class="items">
+                <a href="index.html" title="Home">Home</a>
+                <a href="#" title="About">About</a>
+                <a href="#" title="Home">Projects</a>
+                <a href="contact.html" title="Home">Contact</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="aboutMe">About Me</h3>
+
+        <div class="content">
+          <div class="left">
+            <p>
+              I’m <a href="index.html">Sadman Mahmud Taofiq</a>, a passionate
+              developer with expertise in developer, designer, writer. I love
+              solving problems, building creative solutions, and continuously
+              learning.
+            </p>
+            <ul>
+              <li><strong>Age:</strong> 15</li>
+              <li><strong>class: </strong>9</li>
+              <li><strong>Address:</strong> Bangladesh, Dhaka, Narayangonj</li>
+              <li><strong>Email:</strong> sadmanmahmud001@gmail.com</li>
+              <li><strong>Phone:</strong> 01799915092</li>
+            </ul>
+          </div>
+
+          <div class="right">
+            <div class="headerImageSection" title="Taofiq">
+              <img
+                src="../photos/madeByMe2.png"
+                alt="Taofiq"
+                class="heroImage"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footerContainer">
+        <div class="socialMedia">
+          <div>
+            <a
+              target="_blank"
+              href="https://www.facebook.com/sadmanmahmudtaofiq"
+              class="fa fa-facebook"
+            ></a>
+          </div>
+          <div>
+            <a
+              target="_blank"
+              href="https://www.youtube.com/@sadmanmahmudtaofiq"
+              class="fa fa-youtube-play"
+            ></a>
+          </div>
+          <div>
+            <a
+              target="_blank"
+              href="https://www.instagram.com/sadmanmahmudtaofiq/"
+              class="fa fa-instagram"
+            ></a>
+          </div>
+          <div>
+            <a
+              target="_blank"
+              href="https://github.com/SadmanMahmud001"
+              class="fa fa-github"
+            ></a>
+          </div>
+          <div>
+            <a
+              target="_blank"
+              href="https://www.x.com/sadmanxmahmud/"
+              class="fa fa-twitter"
+            ></a>
+          </div>
+        </div>
+        <div class="rightsReserved">
+          © <span></span>
+          <a href="https://sadmanmahmud001.github.io/Taofiq.com/About/"
+            >Sadman Mahmud Taofiq</a
+          >
+          | All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <div class="scrollArrow" title="Scroll to Top">
+      <a href="#" class="fa fa-chevron-up"></a>
+    </div>
+
+    <div class="testDiv">
+      <p class="test">I'm Taoifq</p>
+    </div>
+    
+  </body>
+  <script>
+    function scroll() {
+      let madeForSetBgColor = document.querySelector(".madeForSetBgColor");
+      let scrollArrow = document.querySelector(".scrollArrow");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 0) {
+          madeForSetBgColor.style.backgroundColor = "#f7f7f7";
+          madeForSetBgColor.style.boxShadow =
+            "1px 1px 10px rgba(0, 0, 0, 0.24)";
+          scrollArrow.style.display = "flex";
+        } else {
+          madeForSetBgColor.style.backgroundColor = "";
+          madeForSetBgColor.style.boxShadow = "none";
+          scrollArrow.style.display = "none";
+        }
+      });
+
+      scrollArrow.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+        });
+      });
+    }
+    scroll();
+
+    function menu() {
+      const menu = document.querySelector(".menu");
+
+      const clickMenuItems = document.querySelector(".clickMenuItems");
+
+      let saveH = localStorage.getItem("saveH") || "0px";
+
+      clickMenuItems.style.maxHeight = saveH;
+
+      menu.addEventListener("click", () => {
+        saveH = saveH === "0px" ? "200px" : "0px";
+        clickMenuItems.style.maxHeight = saveH;
+        localStorage.setItem("saveH", saveH);
+      });
+    }
+    menu();
+  </script>
+</html>

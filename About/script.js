@@ -56,7 +56,13 @@ function serviceCards() {
       icon: "fa-reddit",
       text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime expedita necessitatibus voluptates aut nam commodi, provident atque blanditiis sunt animi?",
     },
+    {
+      title: "UI Design",
+      icon: "fa-paint-brush",
+      text: "Crafting visually appealing and user-friendly designs to enhance user experience. Elevate your brand with intuitive and modern design solutions.",
+    },
   ];
+  
 
   let sreviceSaveHTML = "";
 
@@ -152,6 +158,13 @@ function articles() {
       code: "Python",
       date: "Jan 8th, 2021",
     },
+    {
+      image: "/post4.jpg",
+      title: "Mastering algorithms",
+      text: "Deep dive into algorithms and data structures. Learn optimization techniques to enhance performance and efficiency in your applications.",
+      code: "C++",
+      date: "Feb 15th, 2021",
+    },
   ];
 
   let saveArticles = "";
@@ -195,4 +208,3 @@ serviceCards();
 recentCards();
 articles();
 showDate();
-

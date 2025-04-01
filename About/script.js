@@ -38,31 +38,28 @@ function menu() {
 }
 
 function serviceCards() {
-  const servicesItems = document.querySelector(".servicesItems");
-
   const serviceCart = [
     {
       title: "Web development",
       icon: "fa-code",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime expedita necessitatibus voluptates aut nam commodi, provident atque blanditiis sunt animi?",
+      text: "Building responsive and high-performance websites tailored to your business needs. We focus on clean code and seamless user experiences.",
     },
     {
       title: "App development",
       icon: "fa-mobile",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime expedita necessitatibus voluptates aut nam commodi, provident atque blanditiis sunt animi?",
+      text: "Creating mobile apps that are fast, user-friendly, and tailored to your brand. From design to deployment, we ensure your app delivers exceptional performance.",
     },
     {
       title: "Automation",
       icon: "fa-reddit",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime expedita necessitatibus voluptates aut nam commodi, provident atque blanditiis sunt animi?",
+      text: "Streamlining business processes through custom automation solutions. We help you reduce manual efforts and increase productivity with smart, automated workflows.",
     },
     {
       title: "UI Design",
       icon: "fa-paint-brush",
-      text: "Crafting visually appealing and user-friendly designs to enhance user experience. Elevate your brand with intuitive and modern design solutions.",
+      text: "Crafting visually appealing and user-friendly designs to enhance user experience. Elevate your brand with intuitive and modern design solutions that ensure user satisfaction.",
     },
   ];
-  
 
   let sreviceSaveHTML = "";
 

@@ -12,6 +12,7 @@
   --header-color: #12908e;
   --aboutMe-bg: #eedbce;
   --max-width: 1200px;
+  --padding-x: 40px;
 }
 
 html {
@@ -66,7 +67,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 20px;
+  padding: 10px var(--padding-x);
   background-color: transparent;
   max-width: var(--max-width) !important;
   margin: auto;
@@ -139,38 +140,44 @@ a {
 /* ?contents */
 
 .content {
+  max-width: var(--max-width) !important;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 50px;
-  padding-bottom: 100px;
-  max-width: var(--max-width) !important;
   margin: auto;
   margin-top: 69px;
+  padding: 69px var(--padding-x) 100px var(--padding-x);
 }
 
 .headerImageSection {
-  width: 100%;
+  /* width: 100%; */
   display: flex;
   align-items: center;
+  justify-self: end;
   justify-content: end;
-  /* position: relative; */
+  position: relative;
   padding-bottom: 0;
   cursor: pointer;
 }
 
-
-/* .headerImageSection::after {
+.headerImageSection::after {
   content: "";
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  width: 65%;
+  width: 100%;
   height: 1px;
   background: #000;
   margin: auto;
-} */
+}
+
+@media (max-width: 710px) {
+  .headerImageSection::after {
+    left: 10px !important;
+  }
+}
+
 .heroImage {
   max-width: 250px;
   height: 100%;
@@ -188,18 +195,19 @@ a {
   align-items: center;
 }
 
-@media (max-width: 1250px) {
+/* @media (max-width: 1250px) {
   .left {
     padding-left: 30px;
   }
   .right {
     padding-right: 10px !important;
   }
-}
+} */
 
 .right {
   flex: 1;
   display: flex;
+  justify-content: end;
 }
 
 .info {
@@ -332,7 +340,7 @@ a {
   align-content: center;
   justify-content: center;
   flex-direction: column;
-  padding: 20px;
+  padding: 20px var(--padding-x);
 }
 
 .servicesContents {
@@ -449,7 +457,7 @@ a {
 .recent {
   margin: auto;
   max-width: var(--max-width);
-  padding: 20px;
+  padding: 20px var(--padding-x);
 }
 
 .recentContents {
@@ -535,6 +543,7 @@ a {
 .skillsContainer {
   margin: auto;
   max-width: var(--max-width);
+  padding: 0 var(--padding-x);
 }
 
 .skillsContent {
@@ -549,9 +558,10 @@ a {
   align-items: center;
   justify-content: center;
   width: 100%;
+  gap: 10px;
 }
 .skill-section {
-  padding: 20px 10px;
+  padding: 20px 0;
   margin: 10px;
   border-radius: 8px;
   flex: 1;
@@ -644,7 +654,7 @@ a {
 
 .articlesContainer {
   max-width: var(--max-width);
-  padding: 20px;
+  padding: 20px var(--padding-x);
 }
 
 .articlesContents {
@@ -897,7 +907,7 @@ footer {
     width: 0ch;
   }
   50% {
-    width: 20ch;
+    width: 30ch;
   }
 }
 
@@ -919,7 +929,7 @@ footer {
   display: none;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 710px) {
   .name::after {
     animation: none;
   }
@@ -928,6 +938,7 @@ footer {
   }
   .name2 {
     display: block;
+    text-align: center;
   }
   .content {
     overflow-x: auto;

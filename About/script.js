@@ -113,7 +113,7 @@ function recentCards() {
     let { image, firstHoverText, lastHoverText } = index;
     let html = `
         <div class="recentItems">
-        <img src="../photos/${image}" alt="image">
+        <img src="../photos/${image}" alt="image" loading="lazy">
         <div class="recentHover">
           <div>
             <h3>
@@ -205,7 +205,7 @@ function articles() {
 
             <div class="codeText">
               <div class="code">
-                <img src="${image}" alt="${code}">
+                <img src="${image}" alt="${code}" loading="lazy">
               </div>
               <div class="date">
                 ${date}

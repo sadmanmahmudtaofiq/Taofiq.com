@@ -3,15 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sadman Mahmud Contact</title>
+    <title>Sadman Mahmud</title>
     <link rel="shortcut icon" href="../photos/sm-logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="contach.css" />
+    <link rel="stylesheet" href="../CSS/about.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
   </head>
   <body>
+
     <div class="header">
       <div class="headerContainer">
         <div class="madeForSetBgColor">
@@ -24,7 +25,7 @@
               <div class="items">
                 <a href="index.html" title="Home">Home</a>
                 <a href="about.html" title="About">About</a>
-                <a href="#" title="Projects">Projects</a>
+                <a href="project.html" title="Projects">Projects</a>
                 <a href="contact.html" title="Contact">Contact</a>
               </div>
             </div>
@@ -41,47 +42,43 @@
               <div class="items">
                 <a href="index.html" title="Home">Home</a>
                 <a href="about.html" title="About">About</a>
-                <a href="#" title="Projects">Projects</a>
+                <a href="project.html" title="Projects">Projects</a>
                 <a href="contact.html" title="Contact">Contact</a>
               </div>
             </div>
           </div>
         </div>
+
+        <h3 class="aboutMe">About Me</h3>
+
+        <div class="content">
+          <div class="left">
+            <p>
+              I’m <a href="index.html">Sadman Mahmud Taofiq</a>, a passionate
+              developer with expertise in developer, designer, writer. I love
+              solving problems, building creative solutions, and continuously
+              learning.
+            </p>
+            <ul>
+              <li><strong>Age:</strong> 15</li>
+              <li><strong>class: </strong>9</li>
+              <li><strong>Address:</strong> Bangladesh, Dhaka, Narayangonj</li>
+              <li><strong>Email:</strong> sadmanmahmud001@gmail.com</li>
+              <li><strong>Phone:</strong> 01799915092</li>
+            </ul>
+          </div>
+
+          <div class="right">
+            <div class="headerImageSection" title="Taofiq">
+              <img
+                src="../photos/madeByMe2.png"
+                alt="Taofiq"
+                class="heroImage"
+              />
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-
-    <div class="contactContainer">
-      <div class="contact">
-        <h3>Contact</h3>
-        <form action="thanks.html">
-          <div>
-            <label for="name">Name</label>
-            <input type="text" name="name" id="name" required />
-          </div>
-
-          <div>
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" required />
-          </div>
-
-          <div>
-            <label for="message">Message </label>
-            <textarea
-              name="message
-          "
-              id="message"
-              required
-            ></textarea>
-          </div>
-          <div>
-            <button type="submit">SEND</button>
-          </div>
-        </form>
-      </div>
-    </div>
-
-    <div class="scrollArrow" title="Scroll to Top">
-      <a href="#" class="fa fa-chevron-up"></a>
     </div>
 
     <footer>
@@ -132,25 +129,13 @@
         </div>
       </div>
     </footer>
+
+    <div class="scrollArrow" title="Scroll to Top">
+      <a href="#" class="fa fa-chevron-up"></a>
+    </div>
+    
   </body>
   <script>
-    function menu() {
-      const menu = document.querySelector(".menu");
-
-      const clickMenuItems = document.querySelector(".clickMenuItems");
-
-      let saveH = localStorage.getItem("saveH") || "0px";
-
-      clickMenuItems.style.maxHeight = saveH;
-
-      menu.addEventListener("click", () => {
-        saveH = saveH === "0px" ? "200px" : "0px";
-        clickMenuItems.style.maxHeight = saveH;
-        localStorage.setItem("saveH", saveH);
-      });
-    }
-    menu();
-
     function scroll() {
       let madeForSetBgColor = document.querySelector(".madeForSetBgColor");
       let scrollArrow = document.querySelector(".scrollArrow");
@@ -175,13 +160,21 @@
       });
     }
     scroll();
-    function showDate() {
-      let rightsReservedDate = document.querySelector(".rightsReserved span");
-      const yearText = new Date().getFullYear();
-      if (rightsReservedDate) {
-        rightsReservedDate.innerHTML = yearText;
-      }
+
+    function menu() {
+      const menu = document.querySelector(".menu");
+
+      const clickMenuItems = document.querySelector(".clickMenuItems");
+
+      let saveH = "0px";
+
+      clickMenuItems.style.maxHeight = saveH;
+
+      menu.addEventListener("click", () => {
+        saveH = saveH === "0px" ? "200px" : "0px";
+        clickMenuItems.style.maxHeight = saveH;
+      });
     }
-    showDate();
+    menu();
   </script>
 </html>

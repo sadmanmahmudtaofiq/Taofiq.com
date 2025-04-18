@@ -26,14 +26,13 @@ function menu() {
 
   const clickMenuItems = document.querySelector(".clickMenuItems");
 
-  let saveH = localStorage.getItem("saveH") || "0px";
+  let saveH = "0px";
 
   clickMenuItems.style.maxHeight = saveH;
 
   menu.addEventListener("click", () => {
-    saveH = saveH === "0px" ? "155px" : "0px";
+    saveH = saveH === "0px" ? "170px" : "0px";
     clickMenuItems.style.maxHeight = saveH;
-    localStorage.setItem("saveH", saveH);
   });
 }
 

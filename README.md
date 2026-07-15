@@ -17,7 +17,7 @@ The website includes:
 
 ## Website
 
-**Live Demo:** https://taofiq-com.vercel.app
+**Live Demo:** https://taofiq.vercel.app
 
 ## Built With
 

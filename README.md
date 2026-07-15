@@ -72,6 +72,20 @@ contact-form.php
 | JavaScript | Interactivity |
 | PHP | Contact Form |
 
+## Clone Repository
+
+Clone this repository to your local machine:
+
+```bash
+git clone https://github.com/sadmanmahmudtaofiq/Taofiq.com.git
+```
+
+Or, if you have already cloned it and want to pull the latest changes:
+
+```bash
+git pull origin main
+```
+
 ## License
 
 This project is for personal portfolio purposes.
